@@ -1,0 +1,38 @@
+{
+  "name": "nutrition-server",
+  "version": "1.0.0",
+  "description": "server for nutrition apps",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aytee17/nutrition-server.git"
+  },
+  "author": "Andrew Tang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aytee17/nutrition-server/issues"
+  },
+  "homepage": "https://github.com/aytee17/nutrition-server#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt": "^3.0.0",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-bunyan-logger": "^2.0.0",
+    "koa-compress": "^3.0.0",
+    "koa-cors": "^0.0.16",
+    "koa-csrf": "^3.0.6",
+    "koa-response-time": "^2.0.0",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.8.1",
+    "nodemailer": "^4.6.4",
+    "pg": "^7.4.1",
+    "pg-escape": "^0.2.0",
+    "uniqid": "^4.1.1",
+    "yup": "^0.24.1",
+    "zxcvbn": "^4.4.2"
+  }
+}
