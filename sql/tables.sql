@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS plan_compositions (
 	PRIMARY KEY (plan_id, meal_id, group_no, day_otw)
 );
 
-CREATE TYPE units AS ENUM ('mL', 'g', 'amount');
+CREATE TYPE units AS ENUM ('mL', 'g', 'mg', 'amount');
 
 CREATE TABLE IF NOT EXISTS ingredients (
 	id 				 VARCHAR(10) 	PRIMARY KEY,
@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS ingredients (
 
 CREATE INDEX ingredients_name_index ON ingredients(name);
 
-CREATE TYPE measurement AS ENUM ('mL', 'g', 'amount', 'teaspoon', 'tablespoon', 'cup');
+CREATE TYPE measurement AS ENUM ('mL', 'g', 'mg', 'amount', 'teaspoon', 'tablespoon', 'cup');
 
 -- The inredients in a meal
 CREATE TABLE IF NOT EXISTS meal_compositions (
