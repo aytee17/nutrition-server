@@ -7,6 +7,7 @@ router.get("/ingredients", async ctx => {
 		ctx.response.body = { rows: [] };
 		return;
 	}
+	console.log(ctx.query.q);
 	const result = await ctx.queryDatabase(
 		"SELECT * FROM ingredients WHERE LOWER(name) LIKE %L",
 		`${ctx.query.q.toLowerCase()}%`
