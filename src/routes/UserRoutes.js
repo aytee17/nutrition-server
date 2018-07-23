@@ -1,6 +1,7 @@
 const Router = require("koa-router");
 const router = new Router();
 const queryDatabase = require("../Database");
+const secret = require("../Secret");
 
 const schema = require("../ValidationSchema");
 const mail = require("../Mail");
@@ -16,7 +17,7 @@ const sendMail = mail.createSender({
 		secure: true,
 		auth: {
 			user: "verify@nutritiontrackr.app",
-			pass: "voltagefour"
+			pass: secret.mailPass
 		}
 	}
 });

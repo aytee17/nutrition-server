@@ -1,7 +1,8 @@
 const Koa = require("koa");
 const app = new Koa();
+const secret = require("./Secret");
 app.context.queryDatabase = require("./Database");
-app.keys = ["$1$Rzot2e7W3rDn4&I"];
+app.keys = [secret.key];
 
 // Middleware
 const errorHandling = require("./ErrorHandling");
