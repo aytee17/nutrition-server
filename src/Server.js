@@ -36,6 +36,7 @@ app.use(async (ctx, next) => {
 	if (id) {
 		await next();
 	} else {
+		console.log("not authorised");
 		ctx.throw();
 	}
 });
