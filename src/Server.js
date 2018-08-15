@@ -19,10 +19,10 @@ app.use(errorHandling);
 app.use(responseTime());
 
 app.use(
-	cors({
-		origin: "http://localhost:8080",
-		credentials: true
-	})
+    cors({
+        origin: "http://localhost:8080",
+        credentials: true
+    })
 );
 
 app.use(session(app));
@@ -32,13 +32,13 @@ app.use(userRoutes);
 
 // auth middleware
 app.use(async (ctx, next) => {
-	const { id } = ctx.session;
-	if (id) {
-		await next();
-	} else {
-		console.log("not authorised");
-		ctx.throw();
-	}
+    const { id } = ctx.session;
+    if (id) {
+        await next();
+    } else {
+        console.log("not authorised");
+        ctx.throw();
+    }
 });
 
 app.use(appRoutes);
